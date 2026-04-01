@@ -3,3 +3,4 @@ name: mylib
 description: Моя общая библиотека шаблонов
 type: library  # Теперь Helm знает, что это библиотека
 version: 0.1.0
+icon: https://githubusercontent.com
