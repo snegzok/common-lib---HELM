@@ -23,7 +23,8 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: {{ .Values.ingress.serviceName | default (include "mylib.fullname" .) }}
+            # СВЯЗКА: используем то же имя, что и в шаблоне сервиса
+            name: {{ .Release.Name }}-service
             port:
-              number: {{ .Values.ingress.servicePort | default 80 }}
+              number: {{ .Values.service.port | default 80 }}
 {{- end -}}
